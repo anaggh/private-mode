@@ -1,0 +1,10 @@
+{
+	"plugin-data":
+	{
+		"name": "Private Mode",
+		"description": "Enable private mode (Require authentication to view site)"
+	},
+
+	"enable-private-mode": "Enable private mode",
+	"message": "Message"
+}
