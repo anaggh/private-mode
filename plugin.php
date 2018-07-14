@@ -37,8 +37,8 @@ class PrivateModePlugin extends Plugin
             /**
              * 302 Redirect to admin if not logged in.
              */
-            global $Login;
-            if (! $Login->isLogged()) {
+            $login = new Login();
+            if (! $login->isLogged()) {
                 Alert::set($this->getDbField('message'));
                 Redirect::url(DOMAIN_ADMIN);
             }
