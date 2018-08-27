@@ -25,7 +25,7 @@ class PrivateModePlugin extends Plugin
 
         $html .= '<div>';
         $html .= '<label>' . $Language->get('message') . '</label>';
-        $html .= '<input name="message" id="jsmessage" type="text" value="' . $this->getDbField('message') . '">';
+        $html .= '<input name="message" id="jsmessage" type="text" value="' . $this->getValue('message') . '">';
         $html .= '</div>';
 
         return $html;
@@ -33,13 +33,13 @@ class PrivateModePlugin extends Plugin
 
     public function beforeAll()
     {
-        if ($this->getDbField('enable')) {
+        if ($this->getValue('enable')) {
             /**
              * 302 Redirect to admin if not logged in.
              */
             $login = new Login();
             if (! $login->isLogged()) {
-                Alert::set($this->getDbField('message'));
+                Alert::set($this->getValue('message'));
                 Redirect::url(DOMAIN_ADMIN);
             }
         }
