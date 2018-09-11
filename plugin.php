@@ -40,7 +40,7 @@ class PrivateModePlugin extends Plugin
             $login = new Login();
             if (! $login->isLogged()) {
                 Alert::set($this->getValue('message'));
-                Redirect::url(DOMAIN_ADMIN);
+                Redirect::url(DOMAIN_ADMIN.'/');
             }
         }
     }
