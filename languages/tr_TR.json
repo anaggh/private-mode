@@ -1,0 +1,10 @@
+{
+	"plugin-data":
+	{
+		"name": "Özel mod",
+		"description": "Özel modu etkinleştirin (Siteyi görüntülemek için kimlik doğrulaması iste)"
+	},
+
+	"enable-private-mode": "Özel modu etkinleştir",
+	"message": "Mesaj"
+}
