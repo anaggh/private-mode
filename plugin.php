@@ -13,10 +13,10 @@ class PrivateModePlugin extends Plugin
 
     public function form()
     {
-        global $Language;
+        global $L;
 
         $html  = '<div>';
-        $html .= '<label>' . $Language->get('enable-private-mode') . '</label>';
+        $html .= '<label>' . $L->get('enable-private-mode') . '</label>';
         $html .= '<select name="enable">';
         $html .= '<option value="true" ' . ($this->getValue('enable') === true ? 'selected' : '') . '>Enabled</option>';
         $html .= '<option value="false" ' . ($this->getValue('enable') === false ? 'selected' : '') . '>Disabled</option>';
@@ -24,7 +24,7 @@ class PrivateModePlugin extends Plugin
         $html .= '</div>';
 
         $html .= '<div>';
-        $html .= '<label>' . $Language->get('message') . '</label>';
+        $html .= '<label>' . $L->get('message') . '</label>';
         $html .= '<input name="message" id="jsmessage" type="text" value="' . $this->getValue('message') . '">';
         $html .= '</div>';
 
